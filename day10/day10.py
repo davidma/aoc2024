@@ -38,9 +38,9 @@ def out_of_bounds(x,y,grid_ds):
 
 ## Draw the current state of a grid - useful for debugging
 def print_grid(grid_ds):
-    for x in range(get_height(grid_ds)):
-        for y in range(get_width(grid_ds)):
-            print(grid_ds[x][y],end='')
+    for row in grid_ds:
+        for val in row:
+            print(str(val),end='')
         print()
 
 ##==============================================================================
@@ -50,12 +50,11 @@ def print_grid(grid_ds):
 ## Get the set of grid points (x,y) that contain the start number (0)
 def get_trailheads(grid_ds):
     res = set()
-    for x in range(get_height(grid_ds)):
-        for y in range(get_width(grid_ds)):
-            if grid_ds[x][y] == 0:
+    for x,row in enumerate(grid_ds):
+        for y,val in enumerate(row):
+            if val == 0:
                 res.add( (x,y) )
     return res
-
 
 ## Recursivly returns the number of complete paths from curr to target
 ## Also populate a set of the valid endpoints reached
