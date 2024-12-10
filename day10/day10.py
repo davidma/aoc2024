@@ -49,12 +49,10 @@ def print_grid(grid_ds):
 
 ## Get the set of grid points (x,y) that contain the start number (0)
 def get_trailheads(grid_ds):
-    res = set()
     for x,row in enumerate(grid_ds):
         for y,val in enumerate(row):
             if val == 0:
-                res.add( (x,y) )
-    return res
+               yield (x,y)
 
 ## Recursivly returns the number of complete paths from curr to target
 ## Also populate a set of the valid endpoints reached
