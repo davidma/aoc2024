@@ -4,7 +4,7 @@ All the puzzles are at: https://adventofcode.com/2024
 **Progress on Puzzles**
 
 - Day1: both parts, all good
-- Day2: part A, then part A after a small reddit hint
+- Day2: part A, then part B after a small reddit hint
 - Day3: both parts, no isues
 - Day4: both parts, no isues
 - Day5: part A was fine, needed to look at solutions for part B (to see how Python custom sorts worked)
